@@ -1,0 +1,51 @@
+@use "var";
+@use "mixin";
+
+*{
+    color: var.$white;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+
+body{
+    background: #141414;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    @include mixin.big {
+        max-width: 80rem;
+    }
+}
+
+.page-title {
+    display: block;
+    width: 100%;
+    background: #482f00;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    @include mixin.small {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}

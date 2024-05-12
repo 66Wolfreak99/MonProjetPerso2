@@ -1,0 +1,70 @@
+@use "../var";
+@use "../mixin";
+
+header{
+    color: var.$black;
+    background: var.$main-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    @include mixin.small{
+        flex-direction: column;
+        padding: 0 0.5rem;
+        
+    }
+    .title{
+        font-weight: 800;
+        font-size: 2rem;
+        margin: 1rem 0;
+        font-family: "Merriweather", serif;
+        display: flex;
+        align-items: center;
+        @include mixin.small{
+            justify-content: center;
+            
+        }
+        img{
+            max-width: 8rem;
+            @include mixin.small{
+                max-width: 6rem;
+                
+            }
+        }
+    }
+    .navigation{
+        ul{
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            @include mixin.small{
+                font-size: 0.9rem;
+                gap: 0.5rem;
+                justify-content: space-between;
+                margin: 0.5rem;
+                
+            }
+        }
+        li{
+            list-style: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            
+            a{
+                padding: 0.3rem;
+            }
+            @include mixin.small{
+                font-size: 0.9rem;
+                
+            }
+            
+        }
+    }
+    .current{
+        background: var.$white;
+        color: var.$main-color;
+        border-radius: 3px;
+    }
+}

@@ -1,0 +1,21 @@
+@use "../var";
+@use "../mixin";
+
+.footer {
+    background: #f39e00;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 3rem;
+    @include mixin.small {
+          flex-direction: column;
+          padding: 0 1rem;
+      }
+    &__links{
+        display: flex;
+        gap: 1rem;
+        @include mixin.small {
+            padding: 1rem 0;
+        }
+    }
+}
